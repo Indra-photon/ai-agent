@@ -14,7 +14,7 @@ default_llm=LLM(
 # Create a researcher agent
 researcher = Agent(
   role='Senior Researcher',
-  goal='Discover groundbreaking technologies',
+  goal='Discover groundbreaking technologies in quantum computing',
   verbose=True,
   llm=LLM(
         model="openai/meta-llama/Meta-Llama-3.1-70B-Instruct",
@@ -22,13 +22,13 @@ researcher = Agent(
         api_key=os.getenv("NEBIUS_API_KEY")
 ),
 
-  backstory='A curious mind fascinated by cutting-edge innovation and the potential to change the world, you know everything about tech.'
+  backstory='A curious mind fascinated by cutting-edge innovation and the potential to change the world, you know everything about quantum computing and its applications.',
 )
 
 # Task for the researcher
 research_task = Task(
-  description='Identify the next big trend in AI',
-  expected_output='5 paragraphs on the next big AI trend',
+  description='Identify the next big trend quantum computing will enable',
+  expected_output='5 paragraphs on the future of quantum computing and its potential applications',
   agent=researcher  # Assigning the task to the researcher
 )
 
